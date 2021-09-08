@@ -125,21 +125,21 @@
           </div>
           <div class="avn-home-page__our-story-bottom">
               <div class="visit contact-box">
-                  <img src="../img/visit.svg" alt="">
+                  <img src="@/img/visit.svg" alt="">
                   <div>
                       <p>Visit Us</p>
                       <p>Thane, Mumbai India</p>
                   </div>
               </div>
               <div class="mail contact-box">
-                  <img src="../img/mail.svg" alt="">
+                  <img src="@/img/mail.svg" alt="">
                   <div>
                       <p>Email Us</p>
                       <p>youremail@biogas.com</p>
                   </div>
               </div>
               <div class="call contact-box">
-                  <img src="../img/call.svg" alt="">
+                  <img src="@/img/call.svg" alt="">
                   <div>
                       <p>Call Us</p>
                       <p>+ 91 74873287483</p>
