@@ -85,6 +85,18 @@
               </div>
           </div>
       </div>
+      <div class="avn-home-page__our-story">
+          <div class="avn-home-page__our-story-top">
+            <h1>Our Story</h1>
+            <p>AVN green energy plant has been established in Green Agra City as passion and founded in collaboration with 3 partners having distinct knowledge and experience in the field of Green and Renewable energy solutions.</p>
+          </div>
+          <div class="avn-home-page__our-story-middle">
+              <div class="our-story-middle__left"></div>
+              <div class="our-story-middle__center"></div>
+              <div class="our-story-middle__middle"></div>
+          </div>
+          <div class="avn-home-page__our-story-right"></div>
+      </div>
   </div>
 </template>
 
@@ -240,6 +252,26 @@ export default {
             height: 440px;
             display: flex;
             align-items: center;
+        }
+        .avn-home-page__our-story {
+            .avn-home-page__our-story-top {
+                padding: 32px;
+                text-align: center;
+            }
+            .avn-home-page__our-story-middle{
+                .our-story-middle__left {
+
+                }
+                .our-story-middle__center{
+
+                }
+                .our-story-middle__right {
+
+                }
+            }
+            .avn-home-page__our-story-right {
+
+            }
         }
     }
     @media only screen and (max-width: 600px) {
