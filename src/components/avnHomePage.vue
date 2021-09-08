@@ -6,8 +6,8 @@
           </div>
           <div class="avn-home-page__header-right">
               <ul class="avn-home-page__header-right-labels">
-                  <li v-for="(label, key) in navigationLabels" :key="key">
-                      <a href="javascript:void(0)"  class="avn-home-page__header-label">{{label}}</a>
+                  <li v-for="(label, index, key) in navigationLabels" :key="key">
+                      <a href="javascript:void(0)" id="tab" class="avn-home-page__header-label" :class="activeTab === index ? 'active-tab' : ''" @click="getActiveTab(index)">{{label}}</a>
                   </li>
               </ul>
           </div>
@@ -87,26 +87,65 @@
       </div>
       <div class="avn-home-page__our-story">
           <div class="avn-home-page__our-story-top">
-            <p>Our Story</p>
+            <h4>Our Story</h4>
             <p>AVN green energy plant has been established in Green Agra City as passion and founded in collaboration with 3 partners having distinct knowledge and experience in the field of Green and Renewable energy solutions.</p>
           </div>
           <div class="avn-home-page__our-story-middle">
               <div class="our-story-middle__left">
                   <div>
-                      <p>About</p>
+                      <p class="story-title">About</p>
                       <p>The AVN Green Energy has collaborated with leading player in renewable and green energy solutions with sole focus on yielding pure energy at low cost.</p>
+                  </div>
+                  <div>
+                    <p class="story-title">Our Mission</p>
+                    <p>Driven by passion to promote sustainable green energy generation and consumption for the protection of the climate. And betterment of living standards. has been positioned on international markets since its founding.</p>
+                  </div>
+                  <div>
+                    <p class="story-title">Our Goals</p>
+                    <p>golas</p>
                   </div>
               </div>
               <div class="our-story-middle__center">
-                  <p>Our Mission</p>
-                  <p>Driven by passion to promote sustainable green energy generation and consumption for the protection of the climate. And betterment of living standards. has been positioned on international markets since its founding.</p>
+                <img src="../img/people.jpeg" alt="">
               </div>
-              <div class="our-story-middle__middle">
-                  <p>Our Goals</p>
-                  <p>golas</p>
+              <div class="our-story-middle__right">
+                 <div>
+                      <p class="story-title">Reliability</p>
+                      <p>AVN Green Energy has a cutting edge quality management system which ensures high quality standards at all sites.</p>
+                  </div>
+                  <div>
+                    <p class="story-title">Expertise</p>
+                    <p>We have a team of specialists capable of maximizing the result and delivering the projects on time.</p>
+                  </div>
+                  <div>
+                    <p class="story-title">Quality</p>
+                    <p>The control mechanism allows secure & integrated monitoring of all stages of the works.</p>
+                  </div>
               </div>
           </div>
-          <div class="avn-home-page__our-story-right"></div>
+          <div class="avn-home-page__our-story-bottom">
+              <div class="visit contact-box">
+                  <img src="../img/visit.svg" alt="">
+                  <div>
+                      <p>Visit Us</p>
+                      <p>Thane, Mumbai India</p>
+                  </div>
+              </div>
+              <div class="mail contact-box">
+                  <img src="../img/mail.svg" alt="">
+                  <div>
+                      <p>Email Us</p>
+                      <p>youremail@biogas.com</p>
+                  </div>
+              </div>
+              <div class="call contact-box">
+                  <img src="../img/call.svg" alt="">
+                  <div>
+                      <p>Call Us</p>
+                      <p>+ 91 74873287483</p>
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
 </template>
@@ -118,6 +157,7 @@ export default {
   },
   data () {
       return {
+          activeTab: 0,
           navigationLabels: ['Home', 'About', 'Contact'],
           biogasDesc: [
               {
@@ -154,6 +194,23 @@ export default {
               },
           ]
       }
+  },
+  methods : {
+      getActiveTab (index) {
+          this.activeTab = index
+          if (index === 0) {
+              const homeElement = document.querySelector('.avn-home-page__header')
+              homeElement.scrollIntoView({behavior: 'smooth'})
+          }
+          if (index === 1) {
+              const aboutElement = document.querySelector('.avn-home-page__our-story')
+              aboutElement.scrollIntoView({behavior: 'smooth'})
+          }
+          if (index === 2) {
+              const contactElement = document.querySelector('.avn-home-page__our-story-bottom')
+              contactElement.scrollIntoView({behavior: 'smooth'})
+          }
+      }
   }
 }
 </script>
@@ -171,6 +228,9 @@ export default {
             padding: 8px 40px;
             .avn-home-page__header-left{
                 flex: 1;
+            }
+            .active-tab {
+               color: #478ac9;
             }
         }
         .avn-home-page__header-right-labels {
@@ -226,7 +286,7 @@ export default {
                 white-space: nowrap;
             }
             .avn-home-page__question-text {
-                font-size: 2.25rem;
+                font-size: 2 rem;
                 line-height: 1.1;
             }
             .avn-home-page__question-right {
@@ -247,17 +307,13 @@ export default {
         }
         .avn-home-page__image-list {
             display: flex; 
-            // align-items: center;
-            // margin-top: 32px;
+            padding-bottom: 32px;
         }
         .avn-home-page__image-list > div {
             flex: 1; /*grow*/
             img {
                 width: 100%;
             }
-        }
-        .avn-home-page__text-desc {
-            // margin-top: 64px;
         }
         .div-block {
             height: 440px;
@@ -269,20 +325,63 @@ export default {
             .avn-home-page__our-story-top {
                 padding: 32px;
                 text-align: center;
+                margin-bottom: 32px;
+                h4 {
+                    margin-bottom: 16px;
+                }
             }
             .avn-home-page__our-story-middle{
+                 display: flex;
+                 padding: 0 46px;
+                > * {
+                    margin-right: 32px;
+                }
                 .our-story-middle__left {
-
+                    width: 45%;
+                    > * {
+                        margin-bottom: 64px;
+                    }
                 }
                 .our-story-middle__center{
+                    width: 25%;
+                    img {
+                    width: 100%;
+                    }
 
                 }
                 .our-story-middle__right {
-
+                    width: 20%;
+                     > * {
+                        margin-bottom: 64px;
+                    }
+                }
+                .story-title {
+                    font-size: 1.25rem;
+                    margin-bottom: 16px;
                 }
             }
-            .avn-home-page__our-story-right {
-
+            .avn-home-page__our-story-bottom {
+                background: black;
+                display: flex;
+                justify-content: space-around;
+                padding:64px 32px;
+                > div > img {
+                    height: 60px;
+                    width: 80px;
+                    margin-right: 16px;
+                }
+                >div > div {
+                    color: white;
+                }
+                .contact-box {
+                    display: flex;
+                    align-items: center;
+                    > div > p:first-child {
+                        font-size: 1.5rem;
+                        color: #2ccc;
+                        margin-bottom: 8px;
+                    }
+                }
             }
         }
     }
@@ -320,6 +419,36 @@ export default {
         }
         .avn-home-page__text-desc {
           margin-bottom: 64px !important;
+        }
+        .avn-home-page__our-story-middle{
+            padding: 0 16px !important;
+            flex-direction: column !important;
+            > div {
+                width: 100% !important;
+                flex: 1 !important;
+            }
+        }
+        .our-story-middle__center {
+            margin-bottom: 32px !important;
+        }
+        .avn-home-page__our-story-bottom {
+            flex-direction: column  !important;
+            justify-content:flex-start !important;
+            padding:32px 16px !important;
+            > div > img {
+                    height: 50px !important;
+                    width: 60px !important;
+                    margin-right: 16px !important;
+                }
+            .contact-box {
+                margin-bottom: 64px;
+                > div > p:first-child {
+                    font-size: 1.2rem !important;
+                }
+                &:last-child {
+                    margin-bottom: 16px !important;
+                }
+            }
         }
     }
 </style>
