@@ -18,6 +18,9 @@ export default {
 html{
   overflow-x: hidden !important;
 }
+p {
+  margin: 0;
+}
 body {
   padding: 0;
   margin: 0;
