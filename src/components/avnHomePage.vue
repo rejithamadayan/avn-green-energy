@@ -30,9 +30,12 @@
             </div>
       </div>
       <div class="avn-home-page__image-list">
-          <div class="avn-home-page__image-biogas">
-              <img src="../assets/Plant.jpg" alt="">
-              <div class="avn-home-page__imag-desc  avn-home-page__image-biogas-desc">
+          <div class="avn-home-page__imag-desc avn-home-page__image-biogas">
+              <div class="div-block">
+                  <img src="../assets/Plant.jpg" alt="">
+              </div>
+              <div class="avn-home-page__text-desc avn-home-page__image-biogas-desc">
+                  <h4>Biogas Plant</h4>
                   <ul>
                       <li v-for="(item, key) in biogasDesc" :key="key">
                           <p>{{item.title}}</p>
@@ -46,8 +49,11 @@
               </div>
           </div>
           <div class="avn-home-page__imag-desc avn-home-page__image-process">
-              <img src="../assets/Process.jpg" alt="">
-              <div class="avn-home-page__image-process-desc">
+              <div class="div-block">
+                  <img src="../assets/Process.jpg" alt="">
+              </div>
+              <div class="avn-home-page__text-desc avn-home-page__image-process-desc">
+                  <h4>Production of Biogas</h4>
                   <ul>
                       <li v-for="(item, key) in processDesc" :key="key">
                           <p>{{item.title}}</p>
@@ -61,8 +67,11 @@
               </div>
           </div>
           <div class="avn-home-page__imag-desc avn-home-page__image-fixed">
-              <img src="../assets/Fixed_Dome.jpg" alt="">
-              <div class="avn-home-page__image-fixed-desc">
+              <div class="div-block">
+                   <img src="../assets/Fixed_Dome.jpg" alt="">
+              </div>
+              <div class="avn-home-page__text-desc avn-home-page__image-fixed-desc">
+                  <h4>Fixed Dome type Plant</h4>
                   <ul>
                       <li v-for="(item, key) in fixedDesc" :key="key">
                           <p>{{item.title}}</p>
@@ -126,7 +135,13 @@ export default {
 }
 </script>
 <style lang="scss">
+
     .avn-home-page {
+        h4 {
+            font-size: 26px;
+            padding: 0 24px;
+            margin: 0;
+        }
         .avn-home-page__header {
             display: flex;
             align-items: center;
@@ -209,14 +224,22 @@ export default {
         }
         .avn-home-page__image-list {
             display: flex; 
-            align-items: center;
-            margin-top: 32px;
+            // align-items: center;
+            // margin-top: 32px;
         }
         .avn-home-page__image-list > div {
             flex: 1; /*grow*/
             img {
                 width: 100%;
             }
+        }
+        .avn-home-page__text-desc {
+            // margin-top: 64px;
+        }
+        .div-block {
+            height: 440px;
+            display: flex;
+            align-items: center;
         }
     }
     @media only screen and (max-width: 600px) {
@@ -243,6 +266,16 @@ export default {
                     margin-bottom: 16px !important;
                 }
             }
+        }
+         .avn-home-page__image-list  {
+                flex-direction: column !important;
+        }
+        .div-block {
+            height: inherit !important;
+            margin-bottom: 32px !important;
+        }
+        .avn-home-page__text-desc {
+          margin-bottom: 64px !important;
         }
     }
 </style>
