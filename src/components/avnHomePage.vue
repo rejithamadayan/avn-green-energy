@@ -13,7 +13,7 @@
           </div>
       </div>
       <div class="avn-home-page__image">
-          <img src="../assets/FloatingDrum.png" alt="">
+          <img src="../img/FloatingDrum.png" alt="">
           <div class="avn-home-page__image-text">
                <p class="avn-home-page__image-text-header">AVN Green Energy</p>
                <p class="avn-home-page__image-text-sub-header">This plant</p>
@@ -32,7 +32,7 @@
       <div class="avn-home-page__image-list">
           <div class="avn-home-page__imag-desc avn-home-page__image-biogas">
               <div class="div-block">
-                  <img src="../assets/Plant.jpg" alt="">
+                  <img src="../img/Plant.jpg" alt="">
               </div>
               <div class="avn-home-page__text-desc avn-home-page__image-biogas-desc">
                   <h4>Biogas Plant</h4>
@@ -50,7 +50,7 @@
           </div>
           <div class="avn-home-page__imag-desc avn-home-page__image-process">
               <div class="div-block">
-                  <img src="../assets/Process.jpg" alt="">
+                  <img src="../img/Process.jpg" alt="">
               </div>
               <div class="avn-home-page__text-desc avn-home-page__image-process-desc">
                   <h4>Production of Biogas</h4>
@@ -68,7 +68,7 @@
           </div>
           <div class="avn-home-page__imag-desc avn-home-page__image-fixed">
               <div class="div-block">
-                   <img src="../assets/Fixed_Dome.jpg" alt="">
+                   <img src="../img/Fixed_Dome.jpg" alt="">
               </div>
               <div class="avn-home-page__text-desc avn-home-page__image-fixed-desc">
                   <h4>Fixed Dome type Plant</h4>
@@ -87,13 +87,24 @@
       </div>
       <div class="avn-home-page__our-story">
           <div class="avn-home-page__our-story-top">
-            <h1>Our Story</h1>
+            <p>Our Story</p>
             <p>AVN green energy plant has been established in Green Agra City as passion and founded in collaboration with 3 partners having distinct knowledge and experience in the field of Green and Renewable energy solutions.</p>
           </div>
           <div class="avn-home-page__our-story-middle">
-              <div class="our-story-middle__left"></div>
-              <div class="our-story-middle__center"></div>
-              <div class="our-story-middle__middle"></div>
+              <div class="our-story-middle__left">
+                  <div>
+                      <p>About</p>
+                      <p>The AVN Green Energy has collaborated with leading player in renewable and green energy solutions with sole focus on yielding pure energy at low cost.</p>
+                  </div>
+              </div>
+              <div class="our-story-middle__center">
+                  <p>Our Mission</p>
+                  <p>Driven by passion to promote sustainable green energy generation and consumption for the protection of the climate. And betterment of living standards. has been positioned on international markets since its founding.</p>
+              </div>
+              <div class="our-story-middle__middle">
+                  <p>Our Goals</p>
+                  <p>golas</p>
+              </div>
           </div>
           <div class="avn-home-page__our-story-right"></div>
       </div>
@@ -254,6 +265,7 @@ export default {
             align-items: center;
         }
         .avn-home-page__our-story {
+            background-color: #f2f2f2;
             .avn-home-page__our-story-top {
                 padding: 32px;
                 text-align: center;
