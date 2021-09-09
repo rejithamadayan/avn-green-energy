@@ -2,7 +2,7 @@
   <div class="avn-home-page">
       <div class="avn-home-page__header">
           <div class="avn-home-page__header-left">
-               <img class="" src="" alt="LOGO">
+               <img class="" src="../img/logo.png" alt="LOGO">
           </div>
           <div class="avn-home-page__header-right">
               <ul class="avn-home-page__header-right-labels">
@@ -15,8 +15,8 @@
       <div class="avn-home-page__image">
           <img src="../img/FloatingDrum.png" alt="">
           <div class="avn-home-page__image-text">
-               <p class="avn-home-page__image-text-header">AVN Green Energy</p>
-               <p class="avn-home-page__image-text-sub-header">Established in Green Agra city</p>
+               <p class="avn-home-page__image-text-header">AVN GREEN Energy</p>
+               <p class="avn-home-page__image-text-sub-header">Transforming Waste to Green Energy</p>
           </div>
       </div>
       <div class="avn-home-page__question">
@@ -94,11 +94,22 @@
               <div class="our-story-middle__left">
                   <div>
                       <p class="story-title">About</p>
-                      <p>The AVN Green Energy has collaborated with leading player in renewable and green energy solutions with sole focus on yielding pure energy at low cost.</p>
+                      <p>AVN green energy plant has been established in the Agra City, UttarPradesh. This renewable power generation company has been co-founded by 3 partners having distinct knowledge and experience in the field of Green and Renewa.ble energy solutions.</p>
                   </div>
                   <div>
-                    <p class="story-title">Our Mission</p>
-                    <p>Driven by passion to promote sustainable green energy generation and consumption for the protection of the climate. And betterment of living standards. has been positioned on international markets since its founding.</p>
+                    <p class="story-title">Vision</p>
+                    <p>Driven by passion to promote </p>
+                    <ul>
+                        <li>
+                            <span>Sustainable  green energy for the protection of the climate.</span>
+                        </li>
+                        <li>
+                            <span>Eco friendly and low cost energy to Smart Cities and Smart Village</span>
+                        </li>
+                        <li>
+                            <span>Recycle waste and organic Manure</span>
+                        </li>
+                    </ul>
                   </div>
                   <div>
                     <p class="story-title">Our Goals</p>
@@ -123,26 +134,61 @@
                   </div>
               </div>
           </div>
+          <div class="avn-home-page__services">
+              <h4>Biogas services  and products</h4>
+              <div>
+                  <div>
+                      <p>Biomethane</p>
+                      <p>Today, biogas is generally used directly at the place where it is produced</p>
+                  </div>
+                  <div>
+                      <p>General information</p>
+                      <p>Biogas is actually a mixture of gases - Carbon dioxide (CO2) and methane.</p>
+                  </div>
+                  <div>
+                      <p>Benefits of biogas</p>
+                      <p>Biogas is a very efficient in all  and can be converted into lectricity and heat or organic fertilizer</p>
+                  </div>
+                  <div>
+                      <p>Green organic fertilizer solution</p>
+                      <p>Slurry and manure as cheap substrate and by products as organic fertilizer alongside green energy generation</p>
+                  </div>
+                  <div>
+                      <p>Industry focus</p>
+                      <p>biogas plant focus is to reduce waste, reduce energy costs and climate impact by using green energy.</p>
+                  </div>
+                  <div>
+                      <p>Waste to Energy</p>
+                      <p>The digestion of waste could complete a cycle of raw materials based on food production or food waste</p>
+                  </div>
+              </div>
+          </div>
           <div class="avn-home-page__our-story-bottom">
               <div class="visit contact-box">
                   <img src="../img/visit.svg" alt="">
                   <div>
-                      <p>Visit Us</p>
-                      <p>Thane, Mumbai India</p>
+                      <a href="">
+                        <p>Visit Us</p>
+                        <p>Thane, Mumbai India</p>
+                      </a>
                   </div>
               </div>
               <div class="mail contact-box">
                   <img src="../img/mail.svg" alt="">
                   <div>
-                      <p>Email Us</p>
-                      <p>youremail@biogas.com</p>
+                      <a href = "mailto: abc@example.com">
+                        <p>Email Us</p>
+                        <p>youremail@biogas.com</p>
+                      </a>
                   </div>
               </div>
               <div class="call contact-box">
                   <img src="../img/call.svg" alt="">
                   <div>
-                      <p>Call Us</p>
-                      <p>+ 91 74873287483</p>
+                      <a href="tel:74873287483">
+                        <p>Call Us</p>
+                        <p>+ 91 74873287483</p>
+                       </a>
                   </div>
               </div>
           </div>
@@ -228,6 +274,10 @@ export default {
             padding: 8px 40px;
             .avn-home-page__header-left{
                 flex: 1;
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
             }
             .active-tab {
                color: #478ac9;
@@ -298,10 +348,11 @@ export default {
                     font-weight: 600;
                 }
                 button {
-                    padding: 16px;
+                    padding:12px 16px;
                     background: transparent;
                     border: 1px solid black;
                     cursor: pointer;
+                    width: 175px;
                 }
             }
         }
@@ -377,11 +428,44 @@ export default {
                 .contact-box {
                     display: flex;
                     align-items: center;
-                    > div > p:first-child {
-                        font-size: 1.5rem;
+                    > div > a> p:first-child {
+                        font-size: 1.25rem;
                         color: #2ccc;
                         margin-bottom: 8px;
                     }
+                    > div > a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .avn-home-page__services {
+            padding: 24px;
+            background-color: white;
+            h4 {
+                font-size: 1.35rem;
+                padding: 0;
+                margin-bottom: 16px;
+            }
+            > div {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                > div {
+                    padding: 16px;
+                   width: 30%;
+                   background-color: #f2f2f2;
+                   margin-bottom: 16px;
+                   border: 1px solid;
+                    padding: 10px;
+                    border-radius: 4px;
+                    box-shadow: 5px 5px #888888;
+                }
+                >div > p:first-child {
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 12px;
                 }
             }
         }
@@ -400,6 +484,7 @@ export default {
         .avn-home-page__question {
             flex-direction: column !important;
             align-items: stretch !important;
+            padding: 24px !important;
             .avn-home-page__question-text {
                 font-size: 1.5rem !important;
             }
@@ -448,6 +533,23 @@ export default {
                 }
                 &:last-child {
                     margin-bottom: 16px !important;
+                }
+            }
+        }
+        .avn-home-page__services {
+            h4 {
+                font-size: 1rem;
+            }
+            > div {
+              flex-direction: column;
+              align-items: center;
+              flex-wrap: unset !important;
+                
+                > div {
+                   width: 100% !important;
+                }
+                >div > p:first-child {
+                    font-size: 1.25rem !important;
                 }
             }
         }
