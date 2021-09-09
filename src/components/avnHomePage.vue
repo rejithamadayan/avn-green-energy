@@ -16,7 +16,7 @@
           <img src="../img/FloatingDrum.png" alt="">
           <div class="avn-home-page__image-text">
                <p class="avn-home-page__image-text-header">AVN Green Energy</p>
-               <p class="avn-home-page__image-text-sub-header">This plant</p>
+               <p class="avn-home-page__image-text-sub-header">Established in Green Agra city</p>
           </div>
       </div>
       <div class="avn-home-page__question">
@@ -32,7 +32,7 @@
       <div class="avn-home-page__image-list">
           <div class="avn-home-page__imag-desc avn-home-page__image-biogas">
               <div class="div-block">
-                  <img src="../img/Plant.jpg" alt="">
+                  <img src="../img/Plantn.jpg" alt="">
               </div>
               <div class="avn-home-page__text-desc avn-home-page__image-biogas-desc">
                   <h4>Biogas Plant</h4>
@@ -102,7 +102,7 @@
                   </div>
                   <div>
                     <p class="story-title">Our Goals</p>
-                    <p>golas</p>
+                    <p>Efficient recoveryvalue with organic energy.</p>
                   </div>
               </div>
               <div class="our-story-middle__center">
@@ -266,10 +266,10 @@ export default {
                     padding: 8px 0;
                 }
                 .avn-home-page__image-text-header {
-                     font-size: 5.625rem;
+                     font-size: 3.625rem;
                 }
                 .avn-home-page__image-text-sub-header {
-                     font-size: 2rem;
+                     font-size: 1.25rem;
                 }
             }
         }
@@ -312,6 +312,7 @@ export default {
         .avn-home-page__image-list > div {
             flex: 1; /*grow*/
             img {
+                width: 100%;
                 width: 100%;
             }
         }
@@ -392,7 +393,7 @@ export default {
                     font-size: 2.65rem !important;
                 }
                 .avn-home-page__image-text-sub-header {
-                     font-size: 1.65rem !important;
+                     font-size: 1rem !important;
                 }
             }
         }
