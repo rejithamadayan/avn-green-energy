@@ -102,7 +102,7 @@
                   </div>
                   <div>
                     <p class="story-title">Our Goals</p>
-                    <p>Efficient recoveryvalue with organic energy.</p>
+                    <p>Efficient recovery value with organic energy.</p>
                   </div>
               </div>
               <div class="our-story-middle__center">
